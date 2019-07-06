@@ -3,7 +3,6 @@ package com.flyco.dialogsamples.ui;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,11 +30,13 @@ import com.flyco.dialogsamples.utils.T;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import androidx.appcompat.app.AppCompatActivity;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DialogHomeActivity extends AppCompatActivity implements ExpandableListView.OnChildClickListener {
-    @Bind(R.id.elv) ExpandableListView mElv;
+    @BindView(R.id.elv) ExpandableListView mElv;
     private Context mContext = this;
     public static String[] mGroups = {"Default Inner Dialog", "Custom Dialog", "Default Inner Anim", "Custom Anim"};
     public static String[][] mChilds = {

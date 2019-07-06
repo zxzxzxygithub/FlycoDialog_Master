@@ -10,12 +10,13 @@ import com.flyco.dialog.utils.CornerUtils;
 import com.flyco.dialog.widget.base.BaseDialog;
 import com.flyco.dialogsamples.R;
 
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CustomBaseDialog extends BaseDialog<CustomBaseDialog> {
-    @Bind(R.id.tv_cancel) TextView mTvCancel;
-    @Bind(R.id.tv_exit) TextView mTvExit;
+    @BindView(R.id.tv_cancel) TextView mTvCancel;
+    @BindView(R.id.tv_exit) TextView mTvExit;
 
     public CustomBaseDialog(Context context) {
         super(context);
@@ -31,7 +32,6 @@ public class CustomBaseDialog extends BaseDialog<CustomBaseDialog> {
         ButterKnife.bind(this, inflate);
         inflate.setBackgroundDrawable(
                 CornerUtils.cornerDrawable(Color.parseColor("#ffffff"), dp2px(5)));
-
         return inflate;
     }
 

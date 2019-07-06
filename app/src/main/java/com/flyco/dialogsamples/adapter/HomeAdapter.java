@@ -41,8 +41,7 @@ public class HomeAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             convertView = View.inflate(mContext, R.layout.ad_dialog_home, null);
         }
-
-        TextView tv = ButterKnife.findById(convertView, R.id.tv_bubble);
+        TextView tv = convertView.findViewById( R.id.tv_bubble);
         tv.setText(DialogHomeActivity.mGroups[groupPosition]);
         return convertView;
     }
@@ -70,8 +69,8 @@ public class HomeAdapter extends BaseExpandableListAdapter {
             convertView = View.inflate(mContext, R.layout.ad_dialog_home, null);
         }
 
-        TextView tv = ButterKnife.findById(convertView, R.id.tv_bubble);
-        View v_line = ButterKnife.findById(convertView, R.id.v_line);
+        TextView tv = convertView.findViewById( R.id.tv_bubble);
+        View v_line = convertView.findViewById(R.id.v_line);
 
         v_line.setVisibility(View.INVISIBLE);
         tv.setTextColor(Color.parseColor("#383838"));

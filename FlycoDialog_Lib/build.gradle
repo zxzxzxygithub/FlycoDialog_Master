@@ -5,12 +5,11 @@ apply plugin: 'com.android.library'
 // 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
 version = "1.3.2"
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 28
     resourcePrefix "FlycoDialog_"    //这个随便填
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 23
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 132
         versionName version
     }
@@ -23,11 +22,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-//def siteUrl = 'https://github.com/H07000223'  // 项目的主页
-//def gitUrl = 'https://github.com/H07000223'   // Git仓库的url
+//def siteUrl = 'https://github.com/H07000228'  // 项目的主页
+//def gitUrl = 'https://github.com/H07000228'   // Git仓库的url
 //group = "com.flyco.dialog"       // Maven Group ID for the artifact，一般填你唯一的包名
 //install {
 //    repositories.mavenInstaller {
@@ -47,8 +46,8 @@ dependencies {
 //                }
 //                developers {
 //                    developer {
-//                        id 'H07000223'        //填写的一些基本信息
-//                        name 'H07000223'
+//                        id 'H07000228'        //填写的一些基本信息
+//                        name 'H07000228'
 //                        email '867318349@qq.com'
 //                    }
 //                }
